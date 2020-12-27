@@ -136,6 +136,8 @@ RUN printf "%s\n" \
            "alias mv=\"mv -i\"" \
            "alias rm=\"rm -i\"" >> /root/.bash_aliases
 
+# Install Unity3d(TODO)
+
 COPY start_desktop.sh /usr/local/bin/start_desktop.sh
 
 CMD /usr/local/bin/start_desktop.sh
