@@ -86,7 +86,7 @@ COPY ./self.pem /root/self.pem
 # Precede bash on all new terminator shells with vglrun so that 3d graphics apps will use the GPU
 RUN perl -pi -e 's/^Exec=terminator$/Exec=terminator -e "vglrun bash"/g' /usr/share/applications/terminator.desktop
 
-# Install udacity desktop background (YMMV)
+# Install desktop background (YMMV)
 COPY ./background_rick.jpg /usr/share/lubuntu/wallpapers/1604-lubuntu-default-wallpaper.png
 
 RUN mkdir -p /root/.vnc
