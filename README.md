@@ -28,7 +28,7 @@ When executing /run.sh, the output ends in something like this:
 http://5e1e573deXYZ:40001/vnc.html?host=5e1e573deXYZ&port=40001
 ```
 
-navigate to
+navigate to in your browser
 
 ```
 navigating to http://<your ip>:40001/vnc.html?host=<your ip>&port=40001
