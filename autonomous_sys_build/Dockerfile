@@ -119,7 +119,8 @@ RUN echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > \
     apt-get install -y ros-kinetic-desktop-full && \
     rosdep init && \
     rosdep update && \
-    echo "source /opt/ros/kinetic/setup.bash" >> /root/.bashrc
+    echo "source /opt/ros/kinetic/setup.bash" >> /root/.bashrc && \
+    echo "source /opt/ros/kinetic/setup.bash" >> ~./bashrc
 
 # Upgrade gazebo to gazebo v7
 RUN sh -c 'echo "deb http://packages.osrfoundation.org/gazebo/ubuntu-stable `lsb_release -cs` main" > /etc/apt/sources.list.d/gazebo-stable.list'
