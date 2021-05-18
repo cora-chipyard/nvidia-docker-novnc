@@ -1,10 +1,12 @@
-* 搭建一个可以使用Nvidia GPU的docker容器
+* 搭建一个可以使用 Nvidia GPU 的 docker 容器
 fork from [[https://github.com/willkessler/nvidia-docker-novnc][github repository]]
+[[file:./doc/vnc.png]]
 
 ** 使用方法
 
-  1. Google Cloud中准备一个带gpu的虚拟机实例，配置参考如下
-  2. clone此仓库
+  1. Google Cloud 中准备一个带 gpu 的虚拟机实例，配置参考如下
+     [[file:./doc/config.png]]
+  2. clone 此仓库
   3. 运行构建命令
     #+BEGIN_SRC shell
       sudo sh preinstall.sh
@@ -12,7 +14,7 @@ fork from [[https://github.com/willkessler/nvidia-docker-novnc][github repositor
     #+END_SRC
   4. 构建完成后检查是否构建成功
     运行 =sudo docker images=
-    如果显示含有以下一项,则表示docker构建成功
+    如果显示含有以下一项,则表示 docker 构建成功
     #+BEGIN_SRC
     autonomous_sys_build   latest                          9015ffc80721   15 minutes ago   5.42GB
     #+END_SRC
@@ -33,7 +35,7 @@ fork from [[https://github.com/willkessler/nvidia-docker-novnc][github repositor
       CONTAINER ID   IMAGE                  COMMAND                  CREATED          STATUS          PORTS                                           NAMES
 75c1cadc8c34   autonomous_sys_build   "/bin/sh -c /usr/loc…"   20 minutes ago   Up 20 minutes   0.0.0.0:40001->40001/tcp, :::40001->40001/tcp   autonomous_sys_build
     #+END_SRC
-  6. 通过vnc访问服务器
+  6. 通过 vnc 访问服务器
     #+BEGIN_SRC shell
       http://<SERVER IP>:40001/vnc.html?host=34.80.150.138&port=40001
     #+END_SRC
