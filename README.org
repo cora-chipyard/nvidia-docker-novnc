@@ -1,0 +1,48 @@
+* Build a docker container with Nvidia GPU
+fork from [[https://github.com/willkessler/nvidia-docker-novnc][github repository]]
+
+[[./README_zh.org][中文README]]
+
+[[file:./doc/vnc.png]]
+
+
+** Usage
+
+  1. Require a Google Cloud server with GPU
+     [[file:./doc/config.png]]
+  2. clone  this repository
+  3. Run bulid cmd
+    #+BEGIN_SRC shell
+      sudo sh preinstall.sh
+      sudo sh build.sh
+    #+END_SRC
+  4. Check the status of building
+    Run =sudo docker images=
+    If the following is shown, it means build is complete.
+    #+BEGIN_SRC
+    autonomous_sys_build   latest                          9015ffc80721   15 minutes ago   5.42GB
+    #+END_SRC
+    If only a item like the following, it means some error need to be repqired. Please check the output of building.
+    #+BEGIN_SRC
+    <none>                 <none>                          f20b4afd45b1   28 minutes ago   5.42GB
+    #+END_SRC
+  5. Start a container
+    #+BEGIN_SRC shell
+      sudo sh run.sh
+    #+END_SRC
+    Use the following cmd to check the status of the container.
+    #+BEGIN_SRC shell
+      sudo docker ps -a
+    #+END_SRC
+    If the following is shown, it means everything is OK.
+    #+BEGIN_SRC shell
+      CONTAINER ID   IMAGE                  COMMAND                  CREATED          STATUS          PORTS                                           NAMES
+75c1cadc8c34   autonomous_sys_build   "/bin/sh -c /usr/loc…"   20 minutes ago   Up 20 minutes   0.0.0.0:40001->40001/tcp, :::40001->40001/tcp   autonomous_sys_build
+    #+END_SRC
+  6. Connect to server by VNC
+    #+BEGIN_SRC shell
+      http://<SERVER IP>:40001/vnc.html?host=34.80.150.138&port=40001
+    #+END_SRC
+    
+  
+  
