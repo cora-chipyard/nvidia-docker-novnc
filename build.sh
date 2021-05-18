@@ -7,10 +7,10 @@ echo ""
 echo "********************************************************************************"
 
 cd setup_host
-./basics.sh
-./install-nvidia-drivers.sh
-./install-nvidia-docker2.sh
-./add_xhost.sh
+sudo sh ./basics.sh
+sudo sh ./install-nvidia-drivers.sh
+sudo sh ./install-nvidia-docker2.sh
+sudo sh ./add_xhost.sh
 cd ..
 
 echo "********************************************************************************"
