@@ -40,5 +40,7 @@ fork from [[https://github.com/willkessler/nvidia-docker-novnc][github repositor
       http://<SERVER IP>:40001/vnc.html?host=34.80.150.138&port=40001
     #+END_SRC
     
-  
+** 开启udacity自动驾驶仿真器
+
+请点击 [[https://kaigo.medium.com/how-to-install-udacitys-self-driving-car-simulator-on-ubuntu-20-04-14331806d6dd][这里]]
   
